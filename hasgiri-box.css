@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*  下記コードは taplink.css と併用すること。
+
+        <div class="column-base">
+           <div class="column-body column-1">
+               <div class="poly-panel poly-header">
+                   
+               </div>
+               <div class="poly-panel">
+                   <div class="poly-panel-inner">
+                       <h2>title1</h2>
+                       <p>title1</p>
+                       <a href="#1" class="tap"></a>
+                   </div>
+                   <a href="#1" class="tap"></a>
+               </div>
+               <div class="poly-panel">
+                   <div class="poly-panel-inner">
+                       <h2>title2</h2>
+                       <p>title2</p>
+                       <a href="#2" class="tap"></a>
+                   </div>
+                   <a href="#2" class="tap"></a>
+               </div>
+               <div class="poly-panel poly-footer">
+                   
+               </div>
+           </div>
+        </div>
+*/
+/*　トップページ　変形タップエリア　ie8 非対応　*/
+.column-base {
+    margin-left: 1%;
+}
+
+.column-body {
+    width: 32.3%;
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+    margin-right: 1%;
+}
+
+.column-1 {
+}
+
+.column-2 {
+}
+
+.column-3 {
+}
+
+.poly-panel {
+    box-sizing: border-box;
+    background-color: aliceblue;
+    transform: rotate(-10deg);
+    width: 140%;
+    margin-left: -20%;
+    margin-top: 10px;
+    height: 120px;
+    padding: 3% 20%;
+}
+
+.poly-panel-inner {
+    box-sizing: border-box;
+    transform: rotate(10deg);
+    width: 100%;
+    padding-left: 20px;
+}
+
+.column-1 .poly-header {
+    margin-top: -30px;
+    height: 200px;
+}
+
+.column-1 .poly-footer {
+    margin-bottom: -30px;
+    height: 130px;
+}
+
+.column-2 .poly-header {
+    margin-top: -30px;
+    height: 80px;
+}
+
+.column-2 .poly-footer {
+    margin-bottom: -30px;
+    height: 120px;
+}
+
+.column-3 .poly-header {
+    margin-top: -30px;
+    height: 120px;
+}
+
+.column-3 .poly-footer {
+    margin-bottom: -30px;
+    height: 210px;
+}
+
+.sp-panel {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .column-body {
+        width: 49%;
+    }
+    
+    .column-3 {
+        display: none;
+    }
+    
+    .sp-panel {
+        display: block;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .column-body {
+        width: 98%;
+        float: none;
+    }
+    .column-1 .poly-footer {
+        display: none;
+    }
+    .column-2 .poly-header {
+        display: none;
+        
+    }
+}

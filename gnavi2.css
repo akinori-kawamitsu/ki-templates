@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*
+* follow script in <head></head> tag
+<script src="js/jquery-1.11.2.min.js"></script>
+<script>
+    jQuery(document).ready(function(){
+      jQuery('#toggle').click(function(){
+        jQuery(this).toggleClass('visible');
+        jQuery('.tapdown').toggleClass('visible');
+      });
+});
+</script>
+
+* and navigation html is follow
+       <ul class="gnavi tapdown" role="navigation">
+           <li id="toggle"><a>Menu</a></li>
+            <li><a href="#1">HOME</a>
+            </li>
+            <li class="has-child"><a href="#2">NEWS</a>
+                <ul>
+                    <li><a href="#21">News</a></li>
+                    <li><a href="#22">Recommend Hotels</a></li>
+                </ul>
+            </li>
+        </ul>
+:/
+
+/* css */
+/*  grobal-navigation  */
+.gnavi {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gnavi>li {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    height: 40px;
+}
+
+.gnavi>li:hover {
+    height: auto;
+}
+
+.gnavi>li:first-child {
+    display: none;
+}
+
+.gnavi a {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.tapdown {
+    display: block;
+    float: right;
+    overflow: hidden;
+}
+
+.tapdown ul {
+    padding: 0;
+    list-style: none;
+}
+
+.visible ul {
+    height: auto;
+}
+
+
+@media screen and (max-width:640px) {
+    .gnavi {
+        position: relative;
+        float: left;
+    }
+    
+    .gnavi li {
+        display: block;
+        float: none;
+        height: auto;
+    }
+    
+    .gnavi li:first-child {
+        display: block;
+    }
+    
+    .header-logo {
+        position: absolute;
+        right: 0%;
+        left: 0%;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .tapdown {
+        height: 40px;
+    }
+    
+    .tapdown li {
+        position: relative;
+        overflow: hidden;
+        width: 100px;
+        height: 40px;
+        border-top: #999 1px solid;
+        background-color: rgba(255,255,255,0.8);
+    }
+    
+    .tapdown li:hover {
+        width: auto;
+        height: auto;
+    }
+    
+    .tapdown li ul {
+        margin-top: -40px;
+        margin-left: 100px;
+    }
+    
+    .visible {
+        height: auto;
+    }
+}
